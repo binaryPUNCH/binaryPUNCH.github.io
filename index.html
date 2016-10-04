@@ -1,1 +1,83 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="tech-flex.com : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>tech-flex.com</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/amivit">View on GitHub</a>
+
+          <h1 id="project_title">tech-flex.com</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="welcome-to-tech-flexcom" class="anchor" href="#welcome-to-tech-flexcom" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to tech-flex.com</h3>
+
+<p>Its main purpose is for me to play with the technologies I find interesting and wish to learn. The server is hosted on an Amazon EC2 instance (vps), running on the free-tier t2.micro instance (Ubuntu-x64 OS). </p>
+
+<p>Brief directory of what to find:</p>
+
+<ul>
+<li>tech-flex.com
+This static page you're currently viewing, built with Jekyll, and actually isn't on the VPS, but resides at GitHub Pages (awesome for a free static site)</li>
+<li>blog.tech-flex.com 
+my personal blog running on Wordpress, if it was not obvious. All the posts are +5 years old, so don't judge me :-). I do, however, have plans for more content in the near future (Heads up for "Continous-deployment with AppVeyor" &amp; some "basic JSON.NET usecases")</li>
+<li>mvc.tech-flex.com
+My ASP.NET Core MVC6 playground, with a slick deploy strategy. Commits to the master git-branch are automatically built &amp; deployed live. Thanks to AppVeyor.com for allowing continous-delivery strategy for free. I will go in depth about this Read more about it in my blog post here.
+
+<ul>
+<li>Entity Framework Core connected to a MySQL Amazon RDS database</li>
+<li>Future goals: Add javascript SPA funcitonality &amp; webpack (likely with Angular2 or Vue.js, maybe React).</li>
+</ul>
+</li>
+</ul>
+
+<p>Nginx is used for the blog and Kestrel for the MVC6 site (however Nginx sits in front proxying, since they can't both bind to port 80). Supervisor is used to manage (start/stop/update) MVC6. Would love to encapsulate the entire project here to a self-scaling container with CloudFormation (loadbalancers, Route3 and everything... project for another day)</p>
+
+<p>There is value in taking a moment to think about the deep and broad stack that your application sits on. Go thank and support the projects, both open source and not, that your application uses. Revel in the layers of abstraction that others have created and appreciate the ones that you have created. They make all the LEGO pieces you're using just the correct size, and they make snapping them together a lot of fun.</p>
+
+<ul>
+<li>"We are abstracting on the shoulders of giants" <a href="http://www.hanselman.com/blog/WeAreAbstractingOnTheShouldersOfGiants.aspx">http://www.hanselman.com/blog/WeAreAbstractingOnTheShouldersOfGiants.aspx</a>
+It's a great time to be a programmer." </li>
+</ul>
+
+<p>Enjoy your stay! </p>
+
+<ul>
+<li><p>Paul Wittig
+<a href="mailto:paul@wittig.dk">paul@wittig.dk</a></p></li>
+<li><p>Deploy post
+Commits to the master git branch trigger AppVeyor build attempt (a cloud-based Continous-Integration service), which on success, zips &amp; upload the built project to S3, followed by a request to set my server to update.The self update is basically a simple shell script which shuts off eploy strategy is commit to GitHub master master branch, appveyor </p></li>
+<li>Json.net post</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
